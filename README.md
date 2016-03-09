@@ -8,6 +8,7 @@ git clone https://github.com/zkboys/hexo-blog.git
 cd hexo-blog
 npm install
 ```
+
 ## 修改网站信息
 ```
 # Site
