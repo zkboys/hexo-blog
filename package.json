@@ -17,6 +17,7 @@
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0"
   },
+  
   "scripts":{
     "deploy":"hexo clean && hexo generate && hexo deploy",
     "push":"git add --all && git commit -m 'blog update' && git push origin master",
