@@ -17,12 +17,12 @@ language: zh-CN
 timezone:
 ```
 
-## 创建新博客
+## 创建新文章
 ```
 hexo new 'My new Post'
 
 ```
-将会生成`/source/_posts/My-new-Post.md `文件
+将会生成`/source/_posts/My-new-Post.md `文件，内容如下：
 ```
 ---
 title: My new Post //文章列表标题 网页<title>
