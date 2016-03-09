@@ -3,6 +3,8 @@
 
 ## 安装
 ```
+npm install hexo-cli -g
+git clone https://github.com/zkboys/hexo-blog.git
 cd hexo-blog
 npm install
 ```
