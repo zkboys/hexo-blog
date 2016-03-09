@@ -59,13 +59,16 @@ package.json中加入
 ```
 "scripts":{
   "deploy":"hexo clean && hexo generate && hexo deploy",
-  "done":"git add --all && git commit -m 'blog update' && git push origin master && npm run deploy"
+  "push":"git add --all && git commit -m 'blog update' && git push origin master",
+  "done":"npm run push && npm run deploy"
 }
 ```
 使用方法
 ```
 发布
 npm run deploy
+提交
+npm run push
 提交并发布：
 npm run done
 ```
