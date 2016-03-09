@@ -19,6 +19,7 @@
   },
   "scripts":{
     "deploy":"hexo clean && hexo generate && hexo deploy",
-    "done":"git add --all && git commit -m 'blog update' && git push origin master && npm run deploy"
+    "push":"git add --all && git commit -m 'blog update' && git push origin master",
+    "done":"npm run push && npm run deploy"
   }
 }
