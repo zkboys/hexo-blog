@@ -69,7 +69,6 @@ theme: landscape-local
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/zkboys/zkboys.github.io.git
+  repo: git@github.com:zkboys/zkboys.github.io.git
   branch: master
   message: github page
-
