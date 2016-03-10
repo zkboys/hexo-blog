@@ -37,3 +37,19 @@ require.ensure(["modules/demo.jsx"], function(require) {
 这样除了entry之外会生成的文件demo.asd88sss.min.js(asd88sss我乱写的，webpack会根据文件内容生成[chunkhash:8]).
 
 require.ensure() API的第三个参数是给这个模块命名，否则 chunkFilename: "[name].[chunkhash:8].min.js" 中的 [name] 是一个自动分配的、可读性很差的id(就是一个数字)
+
+## 结合React-Router按需加载写法
+
+```
+childRoutes: [
+  { path: '/login',
+    getComponent: (location, cb) => {
+      require.ensure([], (require) => {
+        cb(null, require('../components/Login'))
+      })
+    }
+  }
+  // ...
+]
+```
+react-router 代码片段 其实就是getComponent函数内部使用了require.ensure()
