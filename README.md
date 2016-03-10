@@ -75,4 +75,5 @@ npm run push
 提交并发布：
 npm run done
 ```
+一般使用`npm run done`命令，提交并发布．
 *注：如果项目没有任何更改，调用npm run push命令会报错*
