@@ -1,7 +1,7 @@
 ---
 title: github提交代码时，即使添加了sshkey仍然需要输入密码的原因
 date: 2016-03-10 13:21:05
-tags:
+tags: github
 ---
 原因是库克隆下来的时候使用的是https的方式，改用ssh方式就OK了,
 

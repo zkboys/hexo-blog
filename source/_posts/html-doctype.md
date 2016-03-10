@@ -1,7 +1,7 @@
 ---
 title: HTML DOCTYPE
 date: 2016-03-09 18:34:53
-tags:
+tags: html
 ---
 ## 介绍
 DOCTYPE(Document Type)，该声明位于文档中最前面的位置，处于 html 标签之前，此标签告知浏览器文档使用哪种 HTML 或者 XHTML 规范。

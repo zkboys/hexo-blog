@@ -1,7 +1,7 @@
 ---
 title: html的viewport meta标签
 date: 2016-03-09 18:56:19
-tags:
+tags: ['html', 'meta']
 ---
 
 移动设备上浏览器一般会加如下meta标签，会有更好的显示效果
