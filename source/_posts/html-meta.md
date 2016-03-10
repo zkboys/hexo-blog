@@ -1,7 +1,8 @@
 ---
 title: html常用meta标签
 date: 2016-03-09 18:49:00
-tags:
+category: [前端, HTML]
+tags: [meta]
 ---
 ## 常用
 ```

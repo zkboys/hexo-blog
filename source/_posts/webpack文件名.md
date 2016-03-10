@@ -1,7 +1,8 @@
 ---
 title: webpack文件名相关配置和按需加载
 date: 2016-03-10 12:28:12
-tags:
+category: [前端, 构建工具]
+tags: [webpack]
 ---
 ## output.filename
 filename是对应于entry里面生成出来的文件名。比如：

@@ -1,7 +1,8 @@
 ---
 title: 一些技术文档
 date: 2016-03-09 14:07:51
-tags:
+category: [资源]
+tags: [docs]
 ---
 
 FreeMarker

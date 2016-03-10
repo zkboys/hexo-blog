@@ -1,7 +1,8 @@
 ---
 title: 基于hexo 和 github 搭建的博客
 date: 2016-03-09 17:42:42
-tags:
+category: [工具]
+tags: [hexo, blog, github]
 ---
 # hexo-blog
 基于hexo搭建的博客 *详细文档请参考[官网](https://hexo.io/)*
