@@ -1,5 +1,5 @@
 ---
-title: github提交代码时，即使添加了sshkey仍然需要输入密码的原因
+title: github提交代码时，即使添加了ssh-key仍然需要输入密码的原因
 date: 2016-03-10 13:21:05
 category: [工具]
 tags: [github, push, ssh-key]
