@@ -25,9 +25,9 @@ tags: [html,meta]
 ```
 
 ## 其他
-而如果你的网站不是响应式的，请不要使用 initial-scale 或者禁用缩放。
+而如果你的网站不是响应式的，请不要使用 initial-scale 或者禁用缩放。便于移动设备访问你的网站的时候，用户可以通过缩放查看你的网站。
 ```
-<meta name="viewport" content="width=device-width,user-scalable=no">
+<meta name="viewport" content="width=device-width,user-scalable=yes">
 ```
 适配 iPhone 6 和 iPhone 6plus 则需要写：
 ```
