@@ -241,5 +241,5 @@ ul.generic-list>lorem10.item*4  //10是只每行10个单词
 - 不要写太复杂的语法，写太复杂了容易出错。
 
 ## 参考连接
-[http://docs.emmet.io/](http://docs.emmet.io/)
-[http://emmet.evget.com/](http://emmet.evget.com/)
+emmet官网 [http://docs.emmet.io/](http://docs.emmet.io/)
+emmet语法查询 [http://emmet.evget.com/](http://emmet.evget.com/)
