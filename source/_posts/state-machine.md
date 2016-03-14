@@ -4,7 +4,7 @@ date: 2016-03-09 19:26:40
 category: [前端, JS]
 tags: [state-machine, tabs]
 ---
-## tab页的状态机方式实现，不多说直接上代码
+tab页的状态机方式实现，不多说直接上代码
 [源码](https://github.com/zkboys/little-demo/blob/master/jq_tabs.html)
 ```html
 <!DOCTYPE html>
