@@ -1,7 +1,7 @@
 ---
 title: css选择器
 date: 2016-03-11 10:01:16
-category: [前端,css]
+category: [前端,CSS]
 tags: [css]
 ---
 

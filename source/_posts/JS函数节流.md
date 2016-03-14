@@ -1,7 +1,7 @@
 ---
 title: JS函数节流/截流
 date: 2016-03-14 15:44:57
-category: [前端, js]
+category: [前端, JS]
 tags: [js]
 ---
 平时作网页的时候，会给window添加resize，scroll事件，这些事件触发频率比较高，如果事件实现比较复杂，性能较低，可以使用节流/截流方式
