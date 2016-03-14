@@ -8,7 +8,7 @@ tags: [hexo, blog, github]
 基于hexo搭建的博客 *详细文档请参考[官网](https://hexo.io/)*
 
 ## 安装
-```
+```shell
 npm install hexo-cli -g
 git clone https://github.com/zkboys/hexo-blog.git
 cd hexo-blog

@@ -6,7 +6,7 @@ tags: [state-machine, tabs]
 ---
 ## tab页的状态机方式实现，不多说直接上代码
 [源码](https://github.com/zkboys/little-demo/blob/master/jq_tabs.html)
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -9,7 +9,7 @@ tags: [js]
 *也不知道谁起的名，一个叫节流，一个叫截流*
 ## 节流
 每间隔一个固定的时间调用一次函数，以$(window).resize()为列：
-```
+```javascript
 $(function() {
     var timer = 0;
     $(window).resize(function() {
@@ -25,7 +25,7 @@ $(function() {
 
 ## 截流
 实现一个搜索功能，用户输入停止300后触发一次搜索事件。
-```
+```javascript
 var searchTimeout,
     searchDelay = 300;
 $('#search').on('keyup', function (event) {
