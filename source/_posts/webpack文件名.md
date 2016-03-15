@@ -1,7 +1,7 @@
 ---
 title: webpack文件名相关配置和按需加载
 date: 2016-03-10 12:28:12
-category: [前端, 构建工具]
+category: [前端, 构建]
 tags: [webpack]
 ---
 ## output.filename
