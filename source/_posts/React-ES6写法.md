@@ -34,14 +34,16 @@ class App extends baseComponent{
     static defaultProps = {
         loading:false
     };
-    //事件的写法,这里要使用箭头函数,箭头函数不会改变this的指向,否则函数内,this指的就不是当前对象了
+    // 事件的写法,这里要使用箭头函数,箭头函数不会改变this的指向,否则函数内,this指的就不是当前对象了
     // React.CreatClass方式React会自动绑定this,ES6写法不会.详见下一小节说明.
     handleClick = (e)=>{
         this.setState();//这里的this指的还是App
     };
     componentDidMount() {
-        // React内置的周期函数,这里要显示的调用父类的相应函数,否则一旦父类中有封装,子类会把父类相应函数覆盖掉,不会执行父类的函数.
-        // 需要判断一下...父类一旦没有实现componentDidMount,这里直接调用就会报错,最好是父类都实现相应的方法,子类就不用判断了.
+        // React内置的周期函数,这里要显示的调用父类的相应函数,
+        // 否则一旦父类中有封装,子类会把父类相应函数覆盖掉,不会执行父类的函数.
+        // 需要判断一下...父类一旦没有实现componentDidMount,这里直接调用就会报错,
+        // 最好是父类都实现相应的方法,子类就不用判断了.
         if (super.componentDidMount) {
             super.componentDidMount();
         }
