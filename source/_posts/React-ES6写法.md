@@ -34,7 +34,8 @@ class App extends baseComponent{
     static defaultProps = {
         loading:false
     };
-    //事件的写法,这里要使用箭头函数,箭头函数不会改变this的指向,否这函数内,this指的就不是当前对象了,React.CreatClass方式React会自动绑定this,ES6写法不会.详见下一小节说明.
+    //事件的写法,这里要使用箭头函数,箭头函数不会改变this的指向,否则函数内,this指的就不是当前对象了
+    // React.CreatClass方式React会自动绑定this,ES6写法不会.详见下一小节说明.
     handleClick = (e)=>{
         this.setState();//这里的this指的还是App
     };
