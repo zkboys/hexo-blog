@@ -27,7 +27,7 @@ index_widgets:
 # widget behavior
 archive_type: 'monthly'
 show_count: true # 是否显示个数 (9)
-recent_count: 20 # 最新文章显示个数
+recent_count: 10 # 最新文章显示个数
 
 # Miscellaneous
 google_analytics:
