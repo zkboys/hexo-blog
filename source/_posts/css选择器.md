@@ -5,7 +5,6 @@ category: [前端,CSS]
 tags: [css]
 ---
 
-## CSS常用选择器
 闲来无事，复习一下。
 
 选择器|例子|描述|CSS版本
