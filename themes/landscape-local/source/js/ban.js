@@ -19,7 +19,7 @@ $(function () {
     var canvas = document.querySelector('#ban'),
         ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
-    canvas.height = 300//window.innerHeight;
+    canvas.height = window.innerHeight;
     ctx.lineWidth = .3;
     ctx.strokeStyle = (new Color(150)).style;
 
