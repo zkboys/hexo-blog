@@ -54,3 +54,6 @@ childRoutes: [
 ]
 ```
 react-router 代码片段 其实就是getComponent函数内部使用了require.ensure()
+
+## 坑
+如果使用按需加载（require.ensure），本文件中就不要使用import再引入相应得模块，否这webpack不会单独打包出一个文件。
