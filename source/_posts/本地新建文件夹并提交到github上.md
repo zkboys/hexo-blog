@@ -23,3 +23,10 @@ git commit -m "first commit"
 git remote add origin git@github.com:your-name/repo-name.git
 git push -u origin master
 ```
+
+## 编辑完成之后，提交命令
+```
+git add --all
+git commit -m '这里写注释'
+git push origin master
+```
