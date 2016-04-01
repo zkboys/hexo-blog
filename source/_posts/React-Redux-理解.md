@@ -21,7 +21,7 @@ tags: [Redux]
 顾名思义，这个view有控制器的功能，主要的作用如下：
 - 包含组装其他组件（component-views），通过props为其他组件提供数据；
 - 通过props.dispatch调用actions中的方法，处理业务逻辑；
-- 通过pros为子组件提供方法。
+- 通过props为子组件提供方法,供子组件调用。
 - 需要通过react-redux connect方法进行包装，将state转换成props。
 
 ### actions
