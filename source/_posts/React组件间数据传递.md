@@ -16,11 +16,9 @@ tags: [React]
 
 代码片段如下：
 ```javascript
-state={
-  childData:{}
-}
+let childData = {}
 render(){
-  return <ChildComponent setParentData={(dataFromChild)=>this.setState({childData:dataFromChild})}/>
+  return <ChildComponent setParentData={(dataFromChild)=>childData=dataFromChild}/>
 }
 //子组件通过调用 this.props.setParentData(dataFromChild);即可将数据传给父级组件。
 ```
