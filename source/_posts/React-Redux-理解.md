@@ -2,7 +2,7 @@
 title: React Redux 理解
 date: 2016-04-01 11:58:35
 category: [前端]
-tags: [Redux]
+tags: [React,Redux]
 ---
 
 初步对Redux的理解，进行一下总结
