@@ -68,4 +68,4 @@ module.exports = {
     ...
   }
 ```
-将所需要进行监听得文件加入`watch-html.js`文件中就可以实现开发模式（devserver模式）下监听html文件，其他模式（线上 测试 等）不会监听html文件。
+将所需要进行监听得文件加入`watch-html.js`文件中就可以实现开发模式（devserver模式）下监听html文件，其他模式（线上 测试 等）不会生成额外的文件。
