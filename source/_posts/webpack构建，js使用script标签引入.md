@@ -19,6 +19,16 @@ output: {
       'antd': 'antd',
       "jquery": "jQuery"
   },
+  ...
+  /*
+   * 如果不使用CDN，拷贝externals文件到指定静态目录，webpack-dev-server也可以获取到这些文件。
+   * */
+  new CopyWebpackPlugin([
+      {from: 'src/static/antd-0.12.12.min.css'},
+      {from: 'src/static/antd-0.12.12.min.js'},
+      {from: 'src/static/react-0.14.6.min.js'},
+      {from: 'src/static/react-dom-0.14.6.min.js'}
+  ])
 ```
 页面上通过script引入js：
 ```html
