@@ -35,6 +35,7 @@ Zepto是一个轻量级的针对现代浏览器的JS库，兼容jQuery用法
 
 webpack
 http://webpack.github.io/
+http://zhaoda.net/webpack-handbook/
 前端构建工具
 
 gulp
