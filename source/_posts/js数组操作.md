@@ -3,6 +3,7 @@ title: js数组操作
 date: 2016-04-19 13:51:54
 category: [前端, JS]
 tags: [js]
+toc: true
 ---
 ## 数组基本方法：
 ### concat()
