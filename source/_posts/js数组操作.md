@@ -426,28 +426,28 @@ console.log(arr.lastIndexOf('d', 5)); // 3
 ### reduceRight()
 
 ## ES6 数组的扩展
-Array.from()
+### Array.from()
 
-Array.of()
+### Array.of()
 
-copyWithin()
+### copyWithin()
 
-find()
+### find()
 
-findIndex()
+### findIndex()
 
-fill()
+### fill()
 
-entries()
+### entries()
 
-keys()
+### keys()
 
-values()
+### values()
 
-includes()
+### includes()
 
-数组的空位
+### 数组的空位
 
-数组推导
+### 数组推导
 
 ## 常用数组算法
