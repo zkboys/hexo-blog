@@ -61,9 +61,10 @@ per_page: 10
 pagination_dir: page
 
 # Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
+# Plugins: https://hexo.io/plugins/
+# Themes: https://hexo.io/themes/
 theme: landscape-local
+# theme: hexo-theme-tranquilpeak-built-for-production-1.7.1
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
