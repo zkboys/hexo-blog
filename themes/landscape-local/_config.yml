@@ -36,3 +36,6 @@ twitter:
 google_plus:
 fb_admins:
 fb_app_id:
+
+duoshuo_enable: true	##不想用，改为false即可
+duoshuo_shortname: zkboys     ##你的多说shortname，上面为true，这个才会起效果
