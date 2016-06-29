@@ -1,5 +1,5 @@
 ---
-title: 关于但页面应用的url处理
+title: 关于单页面应用的url处理
 date: 2016-06-29 18:16:45
 category: [实现方案]
 tags: [单页面]
