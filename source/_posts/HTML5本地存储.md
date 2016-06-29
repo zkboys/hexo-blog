@@ -7,7 +7,7 @@ tags: [js]
 
 分为localStorage和sessionStorage，一个永久有效，一个session级别的，用法完全相同；每个网站5M，用于存储字符串（只能存字符串）。
 ## 支持情况
-![支持情况]('support.png')
+![支持情况](support.png)
 
 ## 检测
 ```js
