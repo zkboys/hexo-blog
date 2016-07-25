@@ -48,7 +48,7 @@ events: {
 ### $dispatch
 派发事件，事件沿着父链冒泡；
 
-### $broadcast()
+### $broadcast
 广播事件，事件向下传导给所有的后代。
 
 
