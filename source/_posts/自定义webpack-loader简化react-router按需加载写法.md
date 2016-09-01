@@ -18,7 +18,9 @@ tags: [webpack]
     },
 },
 ```
-其中startFetchingComponent shouldComponentMount endFetchingComponent 方法会使用发布订阅发送消息，connectComponent用来链接redux
+其中除了`path: '/dev/components',`和 `'./sys-component/SysComponent'` 其他信息，各个route写法都一样，就算复制粘贴，相同代码也占了绝大部分。
+
+注：其中`startFetchingComponent` `shouldComponentMount` `endFetchingComponent` 方法会使用发布订阅发送消息，`connectComponent`用来链接redux，这些hock是贴近我的具体业务加的，具体情况，随机应变。
 
 ## 想要的结果
 简化写法如下就能实现如上功能：
@@ -66,7 +68,7 @@ module.exports = function (source, other) {
 };
 ```
 ## webpack 配置
-由于这是对原routes.js文件的修改，故routes-loader加在preLoaders中,
+由于这是对原routes.js文件的修改，故routes-loader加在preLoaders中,在loaders执行之前，做好这些转换工作。
 ```js
 preLoaders: [
     ...
