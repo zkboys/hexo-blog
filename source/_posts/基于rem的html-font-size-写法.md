@@ -54,3 +54,4 @@ html {
   }
 }
 ```
+注：less 转换方法 `sudo npm install less -g` `lessc styles.less`
