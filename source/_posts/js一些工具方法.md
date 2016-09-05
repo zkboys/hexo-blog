@@ -1,0 +1,66 @@
+---
+title: js一些工具方法
+date: 2016-09-05 10:03:44
+category: [前端, JS]
+tags: [js]
+toc: true
+---
+平时用到的一些小方法，整理起来备用
+
+## 数组乱序
+```js
+var arr = [0, 1, 2, 3, 4, 5, 6];
+arr.sort(function () {
+    return 0.5 - Math.random();
+})
+console.log(arr);
+```
+
+## 随机数
+```js
+/**
+ * 获取 min～max之间的一个随机整数
+ * @param min
+ * @param max
+ * @returns {*}
+ */
+function getRandomNum(min, max) {
+    var range = max - min;
+    var rand = Math.random();
+    return (min + Math.round(rand * range));
+}
+```
+## 日期格式化扩展
+```js
+/**
+ * 扩展Date，添加格式化功能
+ * 年：y，1-4个占位符
+ * 月：M，日：d，时：h，分：m，秒：s，季度：q， 1-2 个占位符
+ * 毫秒：S，1个占位符
+ * 例：
+ * (new Date()).format('yyyy-MM-dd hh:mm:ss.S') ---> 2016-09-05 10:18:32.976
+ * (new Date()).format('yyyy-M-d h:m:s.S')      ---> 2016-9-5 10:18:32.976
+ * @param format
+ * @returns {*}
+ */
+Date.prototype.format = function (format) { //author: meizz
+    var symbolMap = {
+        "M+": this.getMonth() + 1, //月
+        "d+": this.getDate(), //日
+        "h+": this.getHours(), //时
+        "m+": this.getMinutes(), //分
+        "s+": this.getSeconds(), //秒
+        "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+        "S": this.getMilliseconds() //毫秒
+    };
+    if (/(y+)/.test(format)) {
+        format = format.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    }
+    for (var k in symbolMap) {
+        if (new RegExp("(" + k + ")").test(format)) {
+            format = format.replace(RegExp.$1, (RegExp.$1.length == 1) ? (symbolMap[k]) : (("00" + symbolMap[k]).substr(("" + symbolMap[k]).length)));
+        }
+    }
+    return format;
+};
+```
