@@ -66,7 +66,7 @@ Date.prototype.format = function (format) { //author: meizz
 ```
 
 ## 去除字符串前后，左侧，右侧空格
-```
+```js
 var testStr = '   aaa bbb   ';
 // 去掉前后空格
 var str = testStr.replace(/(^\s*)|(\s*$)/g, "");
