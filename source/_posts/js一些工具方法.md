@@ -64,3 +64,29 @@ Date.prototype.format = function (format) { //author: meizz
     return format;
 };
 ```
+
+## 去除字符串前后，左侧，右侧空格
+```
+var testStr = '   aaa bbb   ';
+// 去掉前后空格
+var str = testStr.replace(/(^\s*)|(\s*$)/g, "");
+
+// 去掉左侧空格
+var str = testStr.replace(/(^\s*)/g, ""); 
+
+// 去掉右侧空格
+var str = testStr.replace(/(\s*$)/g, "");
+
+// 扩展string对象
+String.prototype.trim = function() {  
+    return this.replace(/(^\s*)|(\s*$)/g, "");  
+}  
+
+String.prototype.leftTrim = function() {  
+    return this.replace(/(^\s*)/g, "");  
+}
+  
+String.prototype.rightTrim = function() {  
+    return this.replace(/(\s*$)/g, "");  
+}
+```
