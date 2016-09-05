@@ -98,6 +98,43 @@ Date.prototype.format = function (format) {
 };
 ```
 
+## 根据给定时间，获取给定时间当前周，前一周，后一周的所有日期
+
+```js
+/**
+ * 根据给定时间，获取给定时间当前周，前一周，后一周的所有日期
+ * @param date
+ * @returns {{activeDates: Array, prevDates: Array, nextDates: Array}}
+ */
+function getWeekDateRange(date) {
+    var activeDates = [];
+    var prevDates = [];
+    var nextDates = [];
+    var nowTime = date.getTime();
+    var day = date.getDay();
+    var oneDayLong = 24 * 60 * 60 * 1000;
+
+    for (var i = -7; i < 14; i++) {
+        var dateTiem = nowTime + (i - day) * oneDayLong;
+        var d = new Date(dateTiem);
+        if (i < 0) {
+            prevDates.push(d);
+        } else if (i < 7) {
+            activeDates.push(d);
+        } else {
+            nextDates.push(d);
+        }
+
+    }
+
+    return {
+        activeDates: activeDates,
+        prevDates: prevDates,
+        nextDates: nextDates,
+    }
+}
+```
+
 ## 去除字符串前后，左侧，右侧空格
 ```js
 var testStr = '   aaa bbb   ';
