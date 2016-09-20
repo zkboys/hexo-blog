@@ -12,3 +12,26 @@ tags: [js]
 ![正则表达式的选择、分组和引用字符.png](正则表达式的选择、分组和引用字符.png)
 ![正则表达式中的锚字符.png](正则表达式中的锚字符.png)
 ![正则表达式修饰符.png](正则表达式修饰符.png)
+
+## 字符串可以使用正则的四个方法
+```js
+'abc'.search(/abc/);
+'abc'.match(/abc/);
+'abc'.split(/b/);
+'abc'.replace(/abc/, 'def');
+```
+## 正则对象RegExp属性和方法
+```js
+// 五个属性
+// source global ignoreCase multiLine lastIndex
+
+// 两个方法
+// test
+// exec
+var pattern = /Java/g;
+var text = 'JavaScript is more fun than Java!';
+var result;
+while((result = pattern.exec(text)) !== null){
+  console.log("Matched '" + result[0] + "'" + " at Position " + result.index + "; next search begins at " + pattern.lastIndex);
+}
+```
