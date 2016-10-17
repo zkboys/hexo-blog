@@ -1,7 +1,8 @@
 ---
 title: 关于React ref的使用
 date: 2016-08-05 14:00:06
-tags:
+category: [前端, JS]
+tags: [React]
 ---
 React应用中，有时需要操作真实得dom节点，比如使用一些第三方，非React插件的时候，需要直接操作dom，React中，可以使用ref获取;
 ``` js
