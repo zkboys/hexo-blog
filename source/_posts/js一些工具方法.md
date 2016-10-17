@@ -142,7 +142,7 @@ var testStr = '   aaa bbb   ';
 var str = testStr.replace(/(^\s*)|(\s*$)/g, "");
 
 // 去掉左侧空格
-var str = testStr.replace(/(^\s*)/g, ""); 
+var str = testStr.replace(/(^\s*)/g, "");
 
 // 去掉右侧空格
 var str = testStr.replace(/(\s*$)/g, "");
@@ -155,8 +155,22 @@ String.prototype.trim = function() {
 String.prototype.leftTrim = function() {  
     return this.replace(/(^\s*)/g, "");  
 }
-  
+
 String.prototype.rightTrim = function() {  
     return this.replace(/(\s*$)/g, "");  
 }
+```
+
+## 格式化电话号码
+```js
+function formatPhoneNumber (phoneNum) {
+  phoneNum = phoneNum.toString();
+  var regFormatted = /^(\d{3})(\d{1,4})(\d{1,4}$)?/g;
+  var pattern = '$1-$2-$3';
+  return phoneNum.replace(regFormatted, pattern).replace(/^(\d{3}-\d{1,4})(-)$/, '$1');
+  // 第二个replace解决 186-88-，多一个‘-’的问题
+}
+console.log(18688888888); // 186-8888-8888
+console.log('18688888888'); // 186-8888-8888
+console.log(18688);// 186-88
 ```
