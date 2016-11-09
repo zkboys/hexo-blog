@@ -204,8 +204,8 @@ function formatPhoneNumber (phoneNum) {
   phoneNum = phoneNum.toString();
   var regFormatted = /^(\d{3})(\d{1,4})(\d{1,4}$)?/g;
   var pattern = '$1-$2-$3';
-  return phoneNum.replace(regFormatted, pattern).replace(/^(\d{3}-\d{1,4})(-)$/, '$1');
   // 第二个replace解决 186-88-，多一个‘-’的问题
+  return phoneNum.replace(regFormatted, pattern).replace(/^(\d{3}-\d{1,4})(-)$/, '$1');
 }
 console.log(18688888888); // 186-8888-8888
 console.log('18688888888'); // 186-8888-8888
