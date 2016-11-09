@@ -32,6 +32,43 @@ function getRandomNum(min, max) {
 ```
 ## 日期格式化扩展
 ```js
+// es6版本
+
+/**
+ * 日期格式化函数
+ * 年：y，1-4个占位符
+ * 月：M，日：d，时：h，分：m，秒：s，季度：q， 1-2 个占位符
+ * 毫秒：S，1个占位符
+ * 例：
+ * (new Date()).format('yyyy-MM-dd hh:mm:ss.S') ---> 2016-09-05 10:18:32.976
+ * (new Date()).format('yyyy-M-d h:m:s.S')      ---> 2016-9-5 10:18:32.976
+ * @param date
+ * @param format
+ * @returns {*}
+ */
+function formatDate(date, format = 'yyyy-MM-dd') {
+    const symbolMap = {
+        'M+': date.getMonth() + 1, // 月
+        'd+': date.getDate(), // 日
+        'h+': date.getHours(), // 时
+        'm+': date.getMinutes(), // 分
+        's+': date.getSeconds(), // 秒
+        'q+': Math.floor((date.getMonth() + 3) / 3), // 季度
+        S: date.getMilliseconds(), // 毫秒
+    };
+    if (/(y+)/.test(format)) {
+        format = format.replace(RegExp.$1, String(date.getFullYear()).substr(4 - RegExp.$1.length));
+    }
+    for (const k of Object.keys(symbolMap)) {
+        if (new RegExp(`(${k})`).test(format)) {
+            format = format.replace(RegExp.$1, (RegExp.$1.length === 1) ? (symbolMap[k]) : (`00${symbolMap[k]}`.substr(String(symbolMap[k]).length)));
+        }
+    }
+    return format;
+}
+
+// es5版本
+
 /**
  * 日期格式化函数
  * 年：y，1-4个占位符
