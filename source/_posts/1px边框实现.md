@@ -6,8 +6,11 @@ tags: [css]
 ---
 iphone手机，设置border:1px solid #000,实际显示要比一像素要宽，具体原因请自己Google，
 通过transform: scale(0.5)可以实现1像素border，具体封装如下：
-注意：要显示border的元素需要设置：position:relative或者position:absolute;同时只能设置一个top或者bottom（一个left或者right）
-因为top和left是使用：after，left和right使用的是before；而且这种方式无法设置border-radius
+注意：
+- 要显示border的元素需要设置：position:relative或者position:absolute;
+- 同时只能设置一个top或者bottom（一个left或者right）
+因为top和left是使用：after，left和right使用的是before；
+- 这种方式无法设置border-radius;
 ```less
 @defaultWidth: 1px;
 @defaultColor: #e8e8e8;
@@ -15,8 +18,8 @@ iphone手机，设置border:1px solid #000,实际显示要比一像素要宽，�
 .border-top(@width: @defaultWidth, @color: @defaultColor) {
   &:after {
     top: 0;
-    width: 100%;
-
+    left: 0;
+    right: 0;
     -webkit-transform-origin: 50% 100%;
     transform-origin: 50% 100%;
     .border-style(@width, @color);
@@ -27,7 +30,8 @@ iphone手机，设置border:1px solid #000,实际显示要比一像素要宽，�
 .border-bottom(@width: @defaultWidth, @color: @defaultColor) {
   &:after {
     bottom: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     -webkit-transform-origin: 50% 100%;
     transform-origin: 50% 100%;
     .border-style(@width, @color);
@@ -38,7 +42,8 @@ iphone手机，设置border:1px solid #000,实际显示要比一像素要宽，�
 .border-right(@width: @defaultWidth, @color: @defaultColor) {
   &:before {
     right: 0;
-    height: 100%;
+    top: 0;
+    bottom: 0;
     -webkit-transform-origin: 100% 50%;
     transform-origin: 100% 50%;
     .border-style(@width, @color);
@@ -49,7 +54,8 @@ iphone手机，设置border:1px solid #000,实际显示要比一像素要宽，�
 .border-left(@width: @defaultWidth, @color: @defaultColor) {
   &:before {
     left: 0;
-    height: 100%;
+    top: 0;
+    bottom: 0;
     -webkit-transform-origin: 100% 50%;
     transform-origin: 100% 50%;
     .border-style(@width, @color);
