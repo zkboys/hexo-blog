@@ -16,6 +16,9 @@ iphone手机，设置border:1px solid #000,实际显示要比一像素要宽，�
   &:after {
     top: 0;
     width: 100%;
+
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
     .border-style(@width, @color);
   }
   .media()
@@ -25,6 +28,8 @@ iphone手机，设置border:1px solid #000,实际显示要比一像素要宽，�
   &:after {
     bottom: 0;
     width: 100%;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
     .border-style(@width, @color);
   }
   .media()
@@ -34,6 +39,8 @@ iphone手机，设置border:1px solid #000,实际显示要比一像素要宽，�
   &:before {
     right: 0;
     height: 100%;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
     .border-style(@width, @color);
   }
   .media()
@@ -43,6 +50,8 @@ iphone手机，设置border:1px solid #000,实际显示要比一像素要宽，�
   &:before {
     left: 0;
     height: 100%;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
     .border-style(@width, @color);
   }
   .media()
@@ -54,8 +63,6 @@ iphone手机，设置border:1px solid #000,实际显示要比一像素要宽，�
   position: absolute;
   height: @width;
   background-color: @color;
-  -webkit-transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
 }
 
 .media() {
