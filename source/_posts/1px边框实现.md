@@ -12,62 +12,62 @@ iphone手机，设置border:1px solid #000,实际显示要比一像素要宽，�
 因为top和left是使用：after，left和right使用的是before；
 - 这种方式无法设置border-radius;
 ```less
-@defaultWidth: 1px;
-@defaultColor: #e8e8e8;
+@borderDefaultWidth: 1px;
+@borderDefaultColor: #e8e8e8;
 
-.border-top(@width: @defaultWidth, @color: @defaultColor) {
+.border-top(@width: @borderDefaultWidth, @color: @borderDefaultColor) {
   &:after {
     top: 0;
-    left: 0;
-    right: 0;
-    -webkit-transform-origin: 50% 100%;
-    transform-origin: 50% 100%;
-    .border-style(@width, @color);
+    .border-top-bottom-style(@width, @color);
   }
   .media()
 }
 
-.border-bottom(@width: @defaultWidth, @color: @defaultColor) {
+.border-bottom(@width: @borderDefaultWidth, @color: @borderDefaultColor) {
   &:after {
     bottom: 0;
-    left: 0;
-    right: 0;
-    -webkit-transform-origin: 50% 100%;
-    transform-origin: 50% 100%;
-    .border-style(@width, @color);
+    .border-top-bottom-style(@width, @color);
   }
   .media()
 }
 
-.border-right(@width: @defaultWidth, @color: @defaultColor) {
+.border-right(@width: @borderDefaultWidth, @color: @borderDefaultColor) {
   &:before {
     right: 0;
-    top: 0;
-    bottom: 0;
-    -webkit-transform-origin: 100% 50%;
-    transform-origin: 100% 50%;
-    .border-style(@width, @color);
+    .border-left-right-style(@width, @color);
   }
   .media()
 }
 
-.border-left(@width: @defaultWidth, @color: @defaultColor) {
+.border-left(@width: @borderDefaultWidth, @color: @borderDefaultColor) {
   &:before {
     left: 0;
-    top: 0;
-    bottom: 0;
-    -webkit-transform-origin: 100% 50%;
-    transform-origin: 100% 50%;
-    .border-style(@width, @color);
+    .border-left-right-style(@width, @color);
   }
   .media()
 }
 
-.border-style(@width, @color) {
+.border-top-bottom-style(@width, @color) {
   content: "\20";
   display: block;
   position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
   height: @width;
+  background-color: @color;
+}
+
+.border-left-right-style(@width, @color) {
+  content: "\20";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  width: @width;
   background-color: @color;
 }
 
