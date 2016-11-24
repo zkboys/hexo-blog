@@ -1058,6 +1058,38 @@ var a3 = ['x3', 'y3'];
 
 数组推导需要注意的地方是，新数组会立即在内存中生成。这时，如果原数组是一个很大的数组，将会非常耗费内存。
 
+## 实用方法
+### 删除元素
+```js
+/**
+ * 根据元素，删除数据中的此元素，修改原素组，返回删除的元素
+ * @param array
+ * @param item
+ * @returns {Array.<T>|*}
+ */
+function removeByItem(array, item) {
+    if (!array.length) return;
+    var index = array.indexOf(item);
+    if (index > -1) {
+        return array.splice(index, 1);
+    }
+}
+
+/**
+ * 根据索引，删除数据中的元素，修改原素组，返回删除的元素
+ * @param array
+ * @param item
+ * @returns {Array.<T>|*}
+ */
+function removeByIndex(array, index) {
+    if (!array.length) return;
+ 		if (index < 0 || index > array.length - 1) return;
+    if (index > -1) {
+        return array.splice(index, 1);
+    }
+ }
+```
+
 参考链接：
 
 http://www.cnblogs.com/tugenhua0707/p/5052808.html

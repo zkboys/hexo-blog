@@ -22,6 +22,35 @@ $(function() {
     }).trigger('resize');//页面初始化的时候立即调用一次
 })
 ```
+节流的一个封装
+```js
+const throttle = function (action, delay) {
+    let timeout = null
+    let lastRun = 0
+    return function () {
+        if (timeout) {
+            return
+        }
+        let elapsed = Date.now() - lastRun
+        let context = this
+        let args = arguments
+        let runCallback = function () {
+                lastRun = Date.now()
+                timeout = false
+                action.apply(context, args)
+            }
+        if (elapsed >= delay) {
+            runCallback()
+        }
+        else {
+            timeout = setTimeout(runCallback, delay)
+        }
+    }
+}
+$(window).resize(throttle(() => {
+  console.log('我会100ms被调用一次');
+}, 100));
+```
 
 ## 截流
 实现一个搜索功能，用户输入停止300后触发一次搜索事件。
