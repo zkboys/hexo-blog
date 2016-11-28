@@ -17,14 +17,14 @@
         return;
     }
     var canvas = document.querySelector('#ban');
-    var animate = getRandomNum(0, 3);
+    var animate = getRandomNum(0, 2);
     switch (animate) {
         case 0: {
             animateStarLine(canvas);
             break
         }
         case 1: {
-            var colorNum = getRandomNum(0, 3);
+            var colorNum = getRandomNum(0, 2);
             animateCircle(canvas, colorNum);
             break;
         }
