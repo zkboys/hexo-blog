@@ -211,3 +211,32 @@ console.log(18688888888); // 186-8888-8888
 console.log('18688888888'); // 186-8888-8888
 console.log(18688);// 186-88
 ```
+
+## 获取当前日期的前后几天的日期
+```js
+function getOffsetDate(n) {
+    var d = new Date();
+    var year = d.getFullYear();
+    var mon = d.getMonth() + 1;
+    var day = d.getDate();
+    if (day >= n) {
+        if (mon > 1) {
+            mon = mon - 1;
+        }else {
+            year = year - 1;
+            mon = 12;
+        }
+    }
+    d.setDate(d.getDate() + n);
+    year = d.getFullYear();
+    mon = d.getMonth() + 1;
+    day = d.getDate();
+    return [
+        year + "" + (mon < 10 ? ('0' + mon) : mon) + "" + (day < 10 ? ('0' + day) : day),
+        (mon < 10 ? ('0' + mon) : mon) + "-" + (day < 10 ? ('0' + day) : day)
+    ];
+}
+// 如果当前日期是 2016-12-28
+console.log(getOffsetDate(1)); // ["20161229", "12-29"] 当前日期的后一天
+console.log(getOffsetDate(-3)); // ["20161225", "12-25"]  当前日期的前三天
+```
