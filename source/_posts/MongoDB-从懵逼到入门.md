@@ -13,6 +13,35 @@ toc: true
 sudo apt-get install upstart-sysv
 重启之后，就可以使用了。
 ```
+## 启动&停止
+官网上有相关文档，一切以官网为主
+### 终端方式
+```
+# 启动
+mongod
+# 停止
+关闭当前终端即可
+```
+### 后台运行方式
+```
+# 启动 添加--fork参数 --logpath：指定日志文件 --logappend：日志以追加方式记录
+mongod --fork --logpath /var/log/mongodb.log --logappend
+
+# 停止 通过admin数据库命令停止
+mongo
+use admin
+db.shutdownServer()
+```
+
+## 卸载
+[http://askubuntu.com/questions/147135/how-can-i-uninstall-mongodb-and-reinstall-the-latest-version](http://askubuntu.com/questions/147135/how-can-i-uninstall-mongodb-and-reinstall-the-latest-version)
+```
+sudo apt-get purge mongodb mongodb-clients mongodb-server mongodb-dev
+sudo apt-get purge mongodb-10gen
+sudo apt-get autoremove
+```
+
+
 ## 常用shell命令
 - 查看当前数据库：`db`
 - 查看有那些数据库：`show dbs`
