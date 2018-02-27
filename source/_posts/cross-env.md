@@ -4,9 +4,16 @@ date: 2018-02-27 14:13:14
 category: [工具]
 tags: [cross-env]
 ---
+> 不同平台命令有兼容性问题，可以通过一些第三方包解决
 
-## cross-env 
-不同平台（window linux unix）命令行传递参数有兼容性问题，通过cross-env可以解决各个平台的兼容性问题
+##[rimraf](https://www.npmjs.com/package/rimraf)
+> 删除文件、文件夹
+
+## [mkdirp](https://github.com/substack/node-mkdirp)
+> 创建文件夹
+
+## [cross-env](https://www.npmjs.com/package/cross-env) 
+>不同平台（window linux unix）命令行传递参数有兼容性问题，通过cross-env可以解决各个平台的兼容性问题
 
 ### 安装
 ```
